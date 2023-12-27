@@ -2,19 +2,21 @@
     <head>
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title>Eduravel</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="aboutstyles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="google-site-verification" content="QXNgb-ScKLUIxUh3WD7_07c4-5wTLZR-UTHG3EgFqDw" />
     </head>
     <body>
+
         <div class="container">
             <div class="navbar">
-                <img  src="images/LogoWhite.png" class="logo">
+                <img src="images/LogoWhite.png" class="logo">
                 <nav>
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="">TRY</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="login.html">LOG IN</a></li>
+                        <li><a id="loginLink" href="login.html">LOG IN</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,5 +38,13 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const userName = localStorage.getItem('userName');
+                if (userName) {
+                    document.getElementById('loginLink').textContent = userName;
+                }
+            });
+            </script>
     </body>
 </html>
