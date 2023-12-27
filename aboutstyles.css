@@ -64,7 +64,7 @@ p{
     font-size: 12px;
     line-height: 16px;
 }
-button {
+.button {
     width: 180px;
     color: #000;
     font-size: 13px;
@@ -117,4 +117,9 @@ h5{
 }
 .about2{
     background-image: url(images/pfp.jpg);
+}
+.pfp_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
